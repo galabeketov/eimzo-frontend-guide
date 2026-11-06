@@ -49,3 +49,5 @@ netsh int ipv4 show dynamicport tcp
 netsh int ipv4 set dynamicport tcp start=1025 num=64510
 ```
 *(Manba: e-imzo-doc §4.2)*
+
+> **Tekshirildi:** E-IMZO 5.0, macOS, Chromium, `http://localhost` (ws://127.0.0.1:64646). `version`, `apikey`, `pfx.list_all_certificates`, `pfx.load_key`, `pkcs7.create_pkcs7` — hammasi `examples/vanilla` demo orqali, 2026-11-06.

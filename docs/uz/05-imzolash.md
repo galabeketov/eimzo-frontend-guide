@@ -75,3 +75,13 @@ Bu qoidalar rasmiy hujjatda tasdiqlangan, yuqoridagi tavsiyalar shunga asoslanad
 - Sayt parolni hech qachon ko'rmaydi — uni E-IMZO o'zi so'raydi.
 
 `detached` argumenti: `'yes'` — ajratilgan, `'no'` yoki `''` — biriktirilgan. *(§1.2)*
+
+## O'lchovlar (E-IMZO 5.0, macOS, PFX, 2026-11-06)
+| Qadam | Vaqt |
+|-------|------|
+| `version` + `apikey` + `list_all_certificates` (13 kalit) | < 1 s |
+| `load_key` | ~0.5 s |
+| birinchi `create_pkcs7` (parol oynasi bilan) | ~8.5 s, parol terish vaqti bilan |
+| ikkinchi `create_pkcs7` (o'sha `keyId`, parol eslab qolingan) | **54 ms**, oynasiz |
+
+Natija: 1 qator matn uchun attached PKCS7 ≈ 6.6 KB base64, `MIAGCSqGSIb3DQEHAqCA…` bilan boshlanadi (SignedData).

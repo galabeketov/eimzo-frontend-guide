@@ -35,7 +35,7 @@ Bu repo:
 
 | Framework | Papka | Holati |
 |-----------|-------|--------|
-| Vanilla TS (yadro) | [examples/vanilla](examples/vanilla) | ✍️ qoralama |
+| Vanilla TS (yadro + demo) | [examples/vanilla](examples/vanilla) | ✅ real E-IMZO 5.0 bilan sinaldi (macOS, 2026-11-06) |
 | React | [examples/react](examples/react) | ✍️ qoralama (hook + kalit tanlash + demo) |
 | Vue 3 | [examples/vue](examples/vue) | ✍️ qoralama (composable + kalit tanlash + demo) |
 | Angular | [examples/angular](examples/angular) | ✍️ qoralama (service + kalit tanlash + demo) |

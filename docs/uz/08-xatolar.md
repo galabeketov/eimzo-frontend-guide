@@ -34,3 +34,10 @@ Ikki tur xatoni ajrating — foydalanuvchi uchun bu boshqa-boshqa yangilik:
 | `ocsp url is disallowed`, `status = -1` | server VPN/OCSP muammosi, test va prod kalit aralashgan | frontend emas, backend/infra |
 
 Server status kodlari jadvallari (`/backend/auth`, `/backend/pkcs7/verify/*`, mobil) — [e-imzo-doc §2.2](https://github.com/qo0p/e-imzo-doc).
+
+## Real sinovda ko'rilgan `reason` matnlari
+| `reason` | Qachon | Foydalanuvchiga | Tekshirilgan |
+|----------|--------|-----------------|--------------|
+| `Ввод пароля отменен` | parol oynasi bekor qilindi **yoki ~60 soniya javobsiz qolib o'zi yopildi** | "Parol kiritilmadi. E-IMZO oynasi boshqa oynalar orqasida bo'lishi mumkin, Dock'dan oching va qayta urining" | E-IMZO 5.0, macOS, 2026-11-06 |
+
+Bu holatda keshdagi `keyId` ni **o'chiring**: keyingi urinishda `load_key` qayta chaqiriladi va oyna yana ochiladi.

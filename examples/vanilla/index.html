@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>E-IMZO vanilla demo</title>
+  <style>
+    :root { color-scheme: light; }
+    body { font: 15px/1.5 system-ui, sans-serif; max-width: 640px; margin: 32px auto; padding: 0 16px; color: #111; }
+    button { padding: 8px 14px; margin-right: 8px; cursor: pointer; }
+    #keys button { display: block; width: 100%; text-align: left; margin: 0 0 8px; padding: 10px; border: 1px solid #d1d5db; border-radius: 8px; background: #fff; }
+    #keys button.selected { border: 2px solid #2563eb; }
+    #keys button.ended { opacity: .5; }
+    .muted { color: #6b7280; font-size: 13px; }
+    .err { color: #dc2626; }
+    pre { white-space: pre-wrap; word-break: break-all; font-size: 11px; background: #f3f4f6; padding: 8px; }
+    #log { font-size: 12px; color: #374151; }
+  </style>
+</head>
+<body>
+  <h1>E-IMZO vanilla demo</h1>
+  <p id="status" class="muted">Tekshirilmoqda…</p>
+  <div id="keys"></div>
+  <textarea id="text" rows="3" style="width:100%">Salom, E-IMZO!</textarea>
+  <p>
+    <button id="sign" disabled>Imzolash</button>
+    <button id="refresh">Qayta tekshirish</button>
+  </p>
+  <p id="error" class="err"></p>
+  <details id="result" hidden><summary>PKCS7</summary><pre id="pkcs7"></pre></details>
+  <h3>Jurnal</h3>
+  <pre id="log"></pre>
+  <script type="module" src="./demo.ts"></script>
+</body>
+</html>
