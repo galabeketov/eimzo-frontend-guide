@@ -36,7 +36,7 @@ Bu repo:
 | Framework | Papka | Holati |
 |-----------|-------|--------|
 | Vanilla TS (yadro) | [examples/vanilla](examples/vanilla) | ✍️ qoralama |
-| React | [examples/react](examples/react) | 📝 reja |
+| React | [examples/react](examples/react) | ✍️ qoralama (hook + kalit tanlash + demo) |
 | Vue 3 | [examples/vue](examples/vue) | 📝 reja |
 | Angular | [examples/angular](examples/angular) | 📝 reja |
 

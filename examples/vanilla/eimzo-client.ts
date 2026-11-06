@@ -83,7 +83,9 @@ export function createEimzoClient(options: EimzoClientOptions) {
   const quick = options.quickTimeoutMs ?? 20_000;
   const slow = options.passwordTimeoutMs ?? 300_000;
 
-  function call<T extends { success?: boolean; reason?: string }>(request: object, timeoutMs = quick): Promise<T> {
+  type Reply<T> = T & { success?: boolean; reason?: string };
+
+  function call<T>(request: object, timeoutMs = quick): Promise<T> {
     return new Promise<T>((resolve, reject) => {
       let ws: WebSocket;
       try { ws = new WebSocket(socketUrl()); }
@@ -93,7 +95,7 @@ export function createEimzoClient(options: EimzoClientOptions) {
       ws.onopen = () => ws.send(JSON.stringify(request));
       ws.onmessage = (ev) => {
         answered = true; clearTimeout(timer); ws.close();
-        let reply: T;
+        let reply: Reply<T>;
         try { reply = JSON.parse(ev.data as string); }
         catch { return reject(new EimzoError('rad', 'E-IMZO javobi o‘qilmadi')); }
         if (reply.success === false) return reject(new EimzoError('rad', reply.reason ?? 'E-IMZO rad etdi'));
