@@ -37,8 +37,8 @@ Bu repo:
 |-----------|-------|--------|
 | Vanilla TS (yadro) | [examples/vanilla](examples/vanilla) | ✍️ qoralama |
 | React | [examples/react](examples/react) | ✍️ qoralama (hook + kalit tanlash + demo) |
-| Vue 3 | [examples/vue](examples/vue) | 📝 reja |
-| Angular | [examples/angular](examples/angular) | 📝 reja |
+| Vue 3 | [examples/vue](examples/vue) | ✍️ qoralama (composable + kalit tanlash + demo) |
+| Angular | [examples/angular](examples/angular) | ✍️ qoralama (service + kalit tanlash + demo) |
 
 ## Tez boshlash (3 daqiqa)
 

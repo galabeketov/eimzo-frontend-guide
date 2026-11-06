@@ -25,3 +25,12 @@ Ikki tur xatoni ajrating — foydalanuvchi uchun bu boshqa-boshqa yangilik:
 - "Noto'g'ri PIN kod kiritildi."
 
 <!-- TODO: aniq `reason` matnlarini to'plash. Issue shablonini ishlating. -->
+
+## Backend tomonidan keladigan xatolar *(Manba: e-imzo-doc §4.1, §2.2)*
+| Xato | Sabab | Yechim |
+|------|-------|--------|
+| `unable to decode base64 string` | base64 ichida begona belgi: JSON'dan qo'lda ko'chirilgan, `\n` yoki `\"` qolgan | qiymatni JSON parser orqali oling, qo'lda nusxalamang |
+| `MessageDigests are not the same` | ko'p imzoli PKCS7 da ikkinchi imzo boshqa hujjatga qo'yilgan | hamma imzolovchi aynan bir xil baytlarni imzolasin |
+| `ocsp url is disallowed`, `status = -1` | server VPN/OCSP muammosi, test va prod kalit aralashgan | frontend emas, backend/infra |
+
+Server status kodlari jadvallari (`/backend/auth`, `/backend/pkcs7/verify/*`, mobil) — [e-imzo-doc §2.2](https://github.com/qo0p/e-imzo-doc).

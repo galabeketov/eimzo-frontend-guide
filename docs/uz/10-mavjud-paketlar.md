@@ -9,7 +9,7 @@ Holat 2026-11 holatiga ko'ra, sirtdan ko'rilgan. Ishlatishdan oldin litsenziya, 
 | vue3-eimzo | Vue 3 plugin | ~1 yil | |
 | [react-e-imzo](https://github.com/BoburUsmanov1994/react-e-imzo) | React | eskirgan (4 yil) | amalda bo'sh placeholder |
 | [e-imzo (iproman)](https://github.com/iproman/e-imzo) | vanilla JS | 0.2.0 | |
-| [qo0p/e-imzo-doc](https://github.com/qo0p/e-imzo-doc) | hujjat (ru) | | backend: challenge, PKCS7, timestamp |
+| [qo0p/e-imzo-doc](https://github.com/qo0p/e-imzo-doc) | hujjat (ru) | faol, 42★ | **asosiy manba**: E-IMZO-SERVER REST, challenge/auth, timestamp, verify, ko'p imzo, mobil ID-karta API, status kodlari; brauzer qismi qisqa (§1) |
 | Angular | — | **yo'q** | |
 
 Rasmiy: [e-imzo.uz](https://e-imzo.uz).

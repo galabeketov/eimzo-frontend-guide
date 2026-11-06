@@ -38,3 +38,14 @@ Argumentlar juft-juft: domen, kalit, domen, kalit.
 ## Timeout tavsiyasi
 - Oddiy so'rovlar (versiya, ro'yxat): **20 soniya**. USB token sekin portda birinchi javobni kechiktiradi, 10 soniya yetmaydi.
 - Parol so'raladigan so'rovlar (`load_key`, `create_pkcs7`): **5 daqiqa** yoki undan ko'p. E-IMZO oynasi parolni kutadi, timeout foydalanuvchini yarim yo'lda uzib qo'ymasin.
+
+## E-IMZO 6 va avtomatik kalit
+E-IMZO 6 dan boshlab dastur ochiq sahifa domeni uchun API kalitni o'zi yuklab olishi mumkin. Eski versiyalar uchun `apikey` so'rovi majburiy — shuning uchun uni har doim yuboring, zarar qilmaydi. *(Manba: e-imzo-doc §0.3, §1.1)*
+
+## Windows: E-IMZO ishga tushmayapti
+Sabab ko'pincha Windows'ning dinamik TCP port oralig'i tor bo'lishi. Administrator sifatida:
+```
+netsh int ipv4 show dynamicport tcp
+netsh int ipv4 set dynamicport tcp start=1025 num=64510
+```
+*(Manba: e-imzo-doc §4.2)*

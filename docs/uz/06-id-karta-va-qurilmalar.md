@@ -31,3 +31,15 @@ UI maslahat: kalit tanlash ro'yxatida "ID-karta" ni alohida qator qilib, faqat `
 
 <!-- TODO: mobil oqim (E-IMZO mobil ilova, QR) — alohida bo'lim -->
 <!-- TODO: BAIK/CKC sertifikat ro'yxati (`baikey.list_all_certificates`) -->
+
+## ID-karta emulyatori (test uchun) *(Manba: e-imzo-doc §1.4)*
+Jismoniy karta va o'quvchi bo'lmasa ham ID-karta oqimini sinash mumkin:
+1. E-IMZO tray menyusi → Разработка → Эмулятор ID-карты.
+2. Manzil: `wss://test.e-imzo.uz/idcard-emulator`, Enable → tasdiqlash.
+3. Har yoqishda bo'sh virtual karta yaratiladi. Test kalitni `test.e-imzo.uz/registrator/public/ckc.html` da yarating.
+4. Sayt uni jismoniy karta kabi chaqiradi: `create_pkcs7` da `id = 'idcard'` yoki `'ckc'`.
+
+Bu kalitlar **test** kalitlari, prod imzo uchun yaroqsiz.
+
+## Mobil oqim
+ID-karta + NFC telefon + E-IMZO mobil ilova orqali kirish va imzolash alohida REST API (`/frontend/mobile/*`, deeplink, status polling). Frontend bu yerda faqat deeplink yasaydi va statusni so'raydi; batafsil va status kodlari jadvali: [e-imzo-doc §3](https://github.com/qo0p/e-imzo-doc#3-id-card-e-imzo-mobile-rest-api).

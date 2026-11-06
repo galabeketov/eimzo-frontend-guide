@@ -7,3 +7,5 @@
 - **Korporativ proksi / antivirus.** 127.0.0.1 portini bloklashi mumkin.
 - **Bir nechta tab.** Har tab o'z socketini ochadi, muammo yo'q, lekin parol oynasi bitta.
 - **SPA va global obyektlar.** Rasmiy klient `Date.prototype`/`String.prototype` ni o'zgartiradi — SPA da buni istamasligingiz mumkin.
+- **Windows'da E-IMZO ishga tushmaydi.** Dinamik TCP port oralig'i tor; `netsh` bilan kengaytiriladi, 02-bo'limga qarang. *(e-imzo-doc §4.2)*
+- **Sahifa yangilansa `keyId` yo'qoladi.** Parol yana so'raladi — SPA ichida sahifani reload qilmasdan navigatsiya qiling. *(e-imzo-doc §1.3)*

@@ -62,3 +62,16 @@ Hujjatni sotuvchi imzolagan, xaridor "qabul qilaman" deydi — yangi PKCS7 emas,
 
 ## Qurilma bilan imzolash
 ID-karta, BAIK, CKC uchun `keyId` o'rniga `'idcard'`, `'baikey'`, `'ckc'`. PIN ni E-IMZO o'zi so'raydi. Batafsil: 06-id-karta-va-qurilmalar.md.
+
+## Parol eslab qolishning aniq qoidalari *(Manba: e-imzo-doc §1.3)*
+Bu qoidalar rasmiy hujjatda tasdiqlangan, yuqoridagi tavsiyalar shunga asoslanadi:
+- Parol oynasida "Запомнить на 6 час." katagi bor, sukut bo'yicha **belgilanmagan**.
+- 6 soat eslab qolish faqat: katak belgilangan + parol to'g'ri + keyingi `create_pkcs7` lar **o'sha `keyId`** bilan.
+- Katak belgilanmasa parol shu `keyId` uchun **1 daqiqa** saqlanadi.
+- `keyId` sessiyasi **24 soat** yashaydi, keyin `load_key` qayta.
+- Sahifa yangilansa `keyId` yo'qoladi — uni xotirada (store) saqlang, `localStorage` da emas.
+- Har `load_key` **yangi** `keyId` beradi, parolsiz — oyna yana chiqadi. Shuning uchun keshlash muhim.
+- `verify_password` har doim oynani ochadi va katakni **yashiradi**; parol allaqachon eslab qolingan bo'lsa, uni chaqirish saqlashni 1 daqiqaga tushiradi. Ishlatmang.
+- Sayt parolni hech qachon ko'rmaydi — uni E-IMZO o'zi so'raydi.
+
+`detached` argumenti: `'yes'` — ajratilgan, `'no'` yoki `''` — biriktirilgan. *(§1.2)*
