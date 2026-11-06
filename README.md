@@ -24,8 +24,8 @@ Bu repo:
 | 3 | [Protokol: xabarlar lug'ati](docs/uz/03-protokol.md) | ✍️ qoralama |
 | 4 | [Kalitlar ro'yxati (PFX, token)](docs/uz/04-kalitlar-royxati.md) | ✍️ qoralama |
 | 5 | [Hujjat imzolash (PKCS7)](docs/uz/05-imzolash.md) | ✍️ qoralama |
-| 6 | [ID-karta va qurilmalar](docs/uz/06-id-karta-va-qurilmalar.md) | 📝 reja |
-| 7 | [Login oqimi (challenge)](docs/uz/07-login-oqimi.md) | 📝 reja |
+| 6 | [ID-karta va qurilmalar](docs/uz/06-id-karta-va-qurilmalar.md) | ✍️ qoralama |
+| 7 | [Login oqimi (challenge)](docs/uz/07-login-oqimi.md) | ✍️ qoralama |
 | 8 | [Xatolar lug'ati](docs/uz/08-xatolar.md) | ✍️ qoralama |
 | 9 | [Brauzer tuzoqlari](docs/uz/09-brauzer-tuzoqlari.md) | ✍️ qoralama |
 | 10 | [Mavjud paketlar](docs/uz/10-mavjud-paketlar.md) | ✍️ qoralama |
